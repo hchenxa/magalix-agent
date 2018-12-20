@@ -74,6 +74,8 @@ Options:
   --timeout-proto-backoff <duration>         Timeout of backoff policy.
                                               Timeout will be multipled from 1 to 10.
                                               [default: 300ms]
+  --opt-in-analysis-data					 Send anonymous data for analysis.
+											  [default: false]
   --disable-metrics                          Disable metrics collecting and sending.
   --disable-events                           Disable events collecting and sending.
   --dry-run                                  Disable decision execution.
@@ -166,6 +168,7 @@ func main() {
 		skipNamespaces,
 		accountID,
 		clusterID,
+		args["--opt-in-analysis-data"].(bool),
 	)
 
 	oomKilled := make(chan uuid.UUID)
