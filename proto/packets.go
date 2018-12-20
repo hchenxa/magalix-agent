@@ -29,7 +29,7 @@ var (
 
 		new(kv1.NodeList),
 		new(kv1.LimitRangeList),
-		new([]kv1.Pod),
+		new(kv1.PodList),
 
 		new(v1beta1.CronJobList),
 
@@ -38,8 +38,8 @@ var (
 		new(v1beta2.ReplicaSetList),
 		new(v1beta2.DeploymentList),
 
-		new(map[string]interface {}),
-		new([]interface {}),
+		new(map[string]interface{}),
+		new([]interface{}),
 	}
 )
 
